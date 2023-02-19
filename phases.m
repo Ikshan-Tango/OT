@@ -19,15 +19,17 @@ plot(y1,x12,'r',y1,x22,'k',y1,x32,'m');
 cx1=find(y1==0);
 c1=find(x12==0);
 
-line1=[y1([c1,cx1]);x12([c1,cx1])]'
+line1=[y1([c1,cx1]);x12([c1,cx1])]';
 
 c2=find(x22==0);
 
-line2=[y1([c2,cx1]);x22([c2,cx1])]'
+line2=[y1([c2,cx1]);x22([c2,cx1])]';
 
 c3=find(x32==0);
 line3=[y1([c3,cx1]);x32([c3,cx1])]'
-corpt=unique([line1;line2;line3],'rows') 
+
+corpt=unique([line1;line2;line3],'rows');
+
 pt=[0;0];
 for i=1:size(A,1)
     A1=A(i,:);
